@@ -1,0 +1,25 @@
+segmentation and paging 
+page frames -> primary mem
+pages   ->     secondary memory
+
+paging table maintains link of virtual page with physical page frames
+PT working is totally dependent upon CPU/MMU.
+
+
+###Indirection###
+
+By introducing paging, we have actually introduced a level of indirection: we no
+longer think of a (virtual) address as an absolute offset from zero, but rather as a
+relative quantity: va = (page, offset) .
+We think of each virtual address as associated with a page number and an offset from
+the beginning of that page. This is called using one level of indirection.
+So each time a process refers to a virtual address (and of course, note that this is
+happening almost all of the time), the system must translate the virtual address to the
+corresponding physical address based on the PTs for that process.
+
+va = (page, offset)
+va = virtual address
+
+MMU does all the address translation 
+va to pa and pa to va.
+
