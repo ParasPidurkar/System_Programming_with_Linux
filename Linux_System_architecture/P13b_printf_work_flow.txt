@@ -1,0 +1,7 @@
+The hello, world app (process) issues the printf(3) library call.
+2. printf issues the write(2) system call.
+3. The process invoking the system call now switches from User to Supervisor
+(kernel) Mode.
+4. The process runs the underlying kernel code, the underlying device driver
+code, and thus, writes hello, world onto the monitor!
+5. The process is then switched back to non-privileged User Mode.

@@ -1,0 +1,36 @@
+printf is part of the standard C library; on Linux, due to its GNU
+origins, this library is commonly called GNU libc (glibc).
+Glibc is a critical and required component on a Linux box. It not only contains the
+usual standard C library routines (APIs), it is, in fact, the programming interface to
+the operating system! How? Via its lower layer, the system calls.
+
+
+system calls
+
+System calls are actually kernel functionality that can be invoked from userspace via
+glibc stub routines. They serve a critical function; they connect userspace to kernel-
+space. If a user program wants to request something of the kernel (read from a file,
+write to the network, change a file's permissions), it does so by issuing a system call.
+Therefore, system calls are the only legal entry point to the kernel. There is no other
+way for a user-space process to invoke the kernel.
+
+
+Another way to think of this: the Linux kernel internally has literally thousands of
+APIs (or functions). Of these, only a small fraction are made visible or available, that
+is, exposed, to userspace; these exposed kernel APIs are system calls! Again, as an
+approximation, modern Linux glibc has around 300 system calls.
+
+
+system calls essentially work by
+invoking special machine instructions that have the built-in ability to switch the
+processor mode from User to Supervisor. All modern CPU ABIs will provide at least
+one such machine instruction; on the x86 processor, the traditional way to implement
+system calls is to use the special int 0x80 machine instruction. Yes, it is indeed a
+software interrupt (or trap). From Pentium Pro and Linux 2.6 onward, the
+sysenter/syscall machine instructions are used
+
+
+glibc is considered to consist of two parts:
+Arch-independent glibc: The regular libc APIs (such as [s|sn|v]printf,
+memcpy, memcmp, atoi)
+Arch-dependent glibc: The system call stubs

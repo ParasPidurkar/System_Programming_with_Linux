@@ -1,0 +1,60 @@
+Everything is a process or a file
+### user Input sort ###
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$ sort
+mango
+peaches
+apples
+kiwi
+^D
+apples
+kiwi
+mango
+peaches
+
+
+##file sort ###
+
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$ cat players.txt 
+messi
+Anubis
+Virat
+Potato
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$ sort players.txt 
+Anubis
+messi
+Potato
+Virat
+
+
+### file Sort ###
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$ cat players.txt 
+messi
+Anubis
+Virat
+Potato
+
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$ sort < players.txt 
+
+Anubis
+messi
+Potato
+Virat
+
+
+### redirecting output to new file ###
+
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$ cat players.txt 
+messi
+Anubis
+Virat
+Potato
+
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$ sort <players.txt >sort_player.txt
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$ ls
+P1_philosophy.txt  P2_filter_program_sort.txt  players.txt  sort_player.txt
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$ cat sort_player.txt 
+
+Anubis
+messi
+Potato
+Virat

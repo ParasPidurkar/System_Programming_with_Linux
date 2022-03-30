@@ -1,0 +1,29 @@
+A pipe essentially is redirection performed twice: the output of the
+left-hand program becomes the input to the right-hand program. Of
+course, this implies that the program on the left must write to
+stdout, and the program on the read must read from stdin.
+
+
+swarm@archteam-OptiPlex-3050:~/Paras/Learning/code/system Programming$  cat P1_philosophy.txt | sort
+
+A file is an object on the
+CLI, not GUI
+Combine tools seamlessly
+default
+device file and perform I/O (reads and writes) upon it, all using the usual API
+directory, a symbolic link, a device-special file, a named pipe, or a (Unix-domain)
+Everything is a process; if it's not a process, it's a file
+filesystem; beside regular file with plain text or binary content; it could also be a
+Filesystem Switch (VFS). So, with this in place, the application developer can open a
+In fact, every process inherits three files on creation:
+interfaces provided (relax, these APIs will be covered in a subsequent chapter).
+Modular, designed to be repurposed by others
+One tool to do one task
+Plain text preferred
+Provide the mechanism, not the policy
+socket.
+Standard error ( stderr : fd 2): The monitor (or terminal) device, by default
+Standard input ( stdin : fd 0): The keyboard device, by default
+Standard output ( stdout : fd 1): The monitor (or terminal) device, by
+The kernel provides a layer to handle this very abstraction – it's called the Virtual
+Three standard I/O channel

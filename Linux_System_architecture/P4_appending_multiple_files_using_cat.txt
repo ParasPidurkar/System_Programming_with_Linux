@@ -1,0 +1,1 @@
+cat fname1 fname2 fname3 > final_fname

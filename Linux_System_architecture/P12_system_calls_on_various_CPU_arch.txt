@@ -1,0 +1,6 @@
+CPU    MAchine Inst used to trap k mode from user mode        reg for sys call no
+x86         int 0x80 or syscall                                 EAX/RAX 
+arm         swi/svc                                             R0 to R7
+Aarch64     svc                                                 x8 
+MIPS        syscall                                             $v0
+
