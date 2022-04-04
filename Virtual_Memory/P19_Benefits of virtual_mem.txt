@@ -1,0 +1,17 @@
+Modern hardware-acceleration (via TLBs/CPU caches/prefetching)
+mitigates this overhead and provides decent enough performance
+The benefits one derives from VM outweigh the performance issues
+On a VM-based system, we get the following benefits:
+Process-isolation
+The programmer need not worry about physical memory
+Memory-region protection
+
+
+
+With virtual memory OS-level support, the OS exposes APIs (the mmap(2) and
+mprotect(2) system calls) with which one can change the default page
+protections!
+
+
+The OSes exception-handling routine determines whether the access is indeed illegal, and if so,
+the OS immediately kills the process attempting this illegal access.

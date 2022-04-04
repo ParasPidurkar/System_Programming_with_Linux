@@ -22,4 +22,5 @@ va = virtual address
 
 MMU does all the address translation 
 va to pa and pa to va.
+while OS is responsible for creating and maintaining PT for each process.
 

@@ -1,0 +1,12 @@
+Text segment
+
+actual opcodes nad operands 
+objdump --source ->  resides inside text segment
+read-execute
+
+
+Data Segment
+
+global and static variables
+3 mapping 1)initialized data seg 2)uninitialized data seg BSS(Block started by symbol) 3)heap seg
+
