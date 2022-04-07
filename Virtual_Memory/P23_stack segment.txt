@@ -1,0 +1,4 @@
+2 ways to evaluate stack
+- Automatically via the gstack(1) utility
+  syntax:- gstack PID_of_process
+- Manually with the GDB debugger

@@ -10,3 +10,16 @@ Data Segment
 global and static variables
 3 mapping 1)initialized data seg 2)uninitialized data seg BSS(Block started by symbol) 3)heap seg
 
+
+Library segment
+static library :- text and data stored with program memory.
+Dynamic :- runtime default
+
+Stack segment
+
+Every time a function is called, memory is allocated in the stack region (or segment or mapping) to hold metadata that has the function call,
+ parameter passing and the function return mechanism work. This metadata region for each function is called the stack frame.
+
+ If the processor is issued a push or pop instruction, it will go ahead and perform it.
+But, think about it, how does the CPU know where exactly – at which stack memory location or address – it should push or pop memory? The answer: we reserve a
+special CPU register, the stack pointer (usually abbreviated to SP), for precisely this purpose: the value in SP always points to the top of the stack
