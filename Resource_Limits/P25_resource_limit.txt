@@ -1,0 +1,28 @@
+what to learn 
+-per-process resource limits
+-types of resource limits
+- distinguishing between soft and hard limits
+- Details on how a user (or system administrator) can query and set the per-process resource limits using appropriate CLI frontends ( ulimit , prlimit )
+
+
+
+A common hack is the (Distributed) denial-of-service ((D)DoS) attack. Here, the
+malicious attacker attempts to consume, indeed overload, resources on the target
+system to such an extent that the system either crashes, or at the very least, becomes
+completely unresponsive (hung).
+
+
+to fill the 1 GB of data with random content   bs is block size
+dd if=/dev/urandom of=tst count=1024 bs=1M
+
+
+ls -lh tst
+
+
+The frontend command to view and set resource limits is a built-in shell command
+(these commands are called bash-builtins): ulimit
+
+To query the maximum possible
+size of files written to by the shell process (and its children), we set the -f option
+switch to ulimit :
+$ ulimit -f
