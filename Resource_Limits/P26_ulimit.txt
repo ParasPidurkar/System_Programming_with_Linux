@@ -1,0 +1,1 @@
+ulimit -a   // to view all resources
