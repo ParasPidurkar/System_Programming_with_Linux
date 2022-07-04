@@ -1,0 +1,2 @@
+g++ -c -fPIC cpp_code.cpp -o cpp_code.o
+g++ -shared -Wl,-soname,libgeek.so -o libgeek.so cpp_code.o
